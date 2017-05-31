@@ -1,0 +1,36 @@
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family:  "Times New Roman";
+  padding-top: 20px;
+}
+
+.spacing-top {
+  padding-top: 40px;
+}
+
+.spacing-bot {
+  padding-bottom: 40px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.right-side{
+  float: right;
+}

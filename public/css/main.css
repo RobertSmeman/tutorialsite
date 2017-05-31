@@ -1,0 +1,35 @@
+
+.navlogo {
+  font-family:  "Times New Roman";
+  color: white;
+  font-size: 30px;
+}
+
+.dropdown a{
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown ul li a{
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown ul li a:hover{
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown a:hover{
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown {
+  margin-top: 0px;
+
+}
+
+.navbar-toggler-right {
+  margin-top: 5px;
+}
