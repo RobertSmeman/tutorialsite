@@ -21,7 +21,7 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::with('entries')->get();
-        return view('categories.index'), compact($categories, 'categories');
+        return view('categories.index', compact($categories, 'categories'));
     }
 
     /**
@@ -43,12 +43,12 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, array(
-          'name' => 'required|max:255'
+          'category_id' => 'required|max:255'
         ));
 
         $categories = new Category;
 
-        $categories->name = $request->name;
+        $categories->category_id = $request->category_id;
         $categories->save();
 
         Session::flash('success', 'New Category has been created');
