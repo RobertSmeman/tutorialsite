@@ -23,7 +23,7 @@
 
                         {!! Form::model($post, [
                             'method' => 'PATCH',
-                            'url' => ['/admin/posts', $post->id],
+                            'url' => ['/admin', $post->id],
                             'class' => 'form-horizontal',
                             'files' => true
                         ]) !!}

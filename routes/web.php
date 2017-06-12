@@ -14,6 +14,7 @@
 Route::get('/', 'PagesController@Index');
 Route::get('/tutorial', 'PagesController@Tutorial')->name('tutorial.single');
 
+Route::resource('cat', 'CategoryController', ['except' => ['create']]);
 Route::resource('admin', 'Admin\\PostsController');
 
 Auth::routes();

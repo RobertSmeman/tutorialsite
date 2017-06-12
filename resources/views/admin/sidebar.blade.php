@@ -1,14 +1,14 @@
 <div class="col-md-3">
     <div class="panel panel-default panel-flush">
         <div class="panel-heading">
-            Menu
+            {{ Auth::user()->name }}
         </div>
 
         <div class="panel-body">
             <ul class="nav" role="tablist">
                 <li role="presentation">
-                    <a href="{{ url('/admin') }}">
-                        #
+                    <a href="{{ url('/cat') }}">
+                      Maak een nieuwe categorie
                     </a>
                 </li>
             </ul>

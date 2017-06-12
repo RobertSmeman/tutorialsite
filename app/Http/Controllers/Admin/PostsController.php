@@ -7,7 +7,9 @@ use App\Http\Controllers\Controller;
 
 use App\Post;
 use Illuminate\Http\Request;
+use App\Category;
 use Session;
+use Image;
 
 class PostsController extends Controller
 {
@@ -34,8 +36,8 @@ class PostsController extends Controller
         } else {
             $posts = Post::paginate($perPage);
         }
-
-        return view('admin.posts.index', compact('posts'));
+        $categories = Category::all();
+        return view('admin.posts.index', compact('posts'))->withCategories($categories);
     }
 
     /**
@@ -45,7 +47,8 @@ class PostsController extends Controller
      */
     public function create()
     {
-        return view('admin.posts.create');
+        $categories = Category::all();
+        return view('admin.posts.create')->withCategories($categories);
     }
 
     /**
@@ -58,9 +61,22 @@ class PostsController extends Controller
     public function store(Request $request)
     {
 
-        $requestData = $request->all();
+        $posts = new Post;
 
-        Post::create($requestData);
+        $posts->title = $request->title;
+        $posts->content = $request->content;
+        $posts->category = $request->category;
+
+        if ($request->hasFile('upload')) {
+        $image = $request->file('upload');
+        $filename = time() . '.' . $image->getClientOriginalExtension();
+        $location = public_path('images/' . $filename);
+        Image::make($image)->resize(1500, 800)->save($location);
+
+        $posts->upload = $filename;
+        }
+
+        $posts->save();
 
         Session::flash('flash_message', 'Post added!');
 
@@ -76,9 +92,10 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-        $post = Post::findOrFail($id);
 
-        return view('admin.posts.show', compact('post'));
+        $post = Post::find($id);
+        $categories = Category::all();
+        return view('admin.posts.show', compact('post', 'categories'));
     }
 
     /**
@@ -91,8 +108,8 @@ class PostsController extends Controller
     public function edit($id)
     {
         $post = Post::findOrFail($id);
-
-        return view('admin.posts.edit', compact('post'));
+        $categories = Category::all();
+        return view('admin.posts.edit', compact('post'))->withCategories($categories);
     }
 
     /**

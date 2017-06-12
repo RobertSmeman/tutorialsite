@@ -10,6 +10,10 @@
   padding-top: 40px;
 }
 
+.margin-top {
+  margin-top: 40px;
+}
+
 .spacing-bot {
   padding-bottom: 40px;
 }
@@ -33,4 +37,25 @@ a:hover {
 
 .right-side{
   float: right;
+}
+
+@media screen and (min-width: 767px) {
+.text-center {
+      margin-left: -38px;
+      margin-right: auto;
+}
+
+.just {
+  margin-left: -50px;
+}
+}
+@media screen and (max-width: 767px) {
+.text-center {
+      margin-left: auto;
+      margin-right: auto;
+}
+
+.just {
+  margin-left: 0px;
+}
 }

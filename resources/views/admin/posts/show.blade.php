@@ -14,7 +14,7 @@
                         <a href="{{ url('/admin/' . $post->id . '/edit') }}" title="Edit Post"><button class="btn btn-primary btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Bewerken</button></a>
                         {!! Form::open([
                             'method'=>'DELETE',
-                            'url' => ['admin/posts', $post->id],
+                            'url' => ['admin', $post->id],
                             'style' => 'display:inline'
                         ]) !!}
                             {!! Form::button('<i class="fa fa-trash-o" aria-hidden="true"></i> Verwijderen', array(
@@ -30,10 +30,27 @@
                         <div class="table-responsive">
                             <table class="table table-borderless">
                                 <tbody>
+                                  @foreach($categories as $category)
                                     <tr>
                                         <th>ID</th><td>{{ $post->id }}</td>
                                     </tr>
-                                    <tr><th> Title </th><td> {{ $post->title }} </td></tr><tr><th> Content </th><td> {{ $post->content }} </td></tr><tr><th> Category </th><td> {{ $post->category }} </td></tr>
+                                    <tr>
+                                      <th> Title </th>
+                                      <td> {{ $post->title }} </td>
+                                    </tr>
+                                    <tr>
+                                      <th> Thumbnail </th>
+                                      <td> <img src="{{ asset('images/' . $post->upload) }}" alt="" width="40%"> </td>
+                                    </tr>
+                                    <tr>
+                                      <th> Content </th>
+                                      <td> {{ $post->content }} </td>
+                                    </tr>
+                                    <tr>
+                                      <th> Category </th>
+                                      <td> {{ $category->name }} </td>
+                                    </tr>
+                                  @endforeach
                                 </tbody>
                             </table>
                         </div>
