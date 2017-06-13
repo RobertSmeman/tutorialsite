@@ -19,7 +19,7 @@
           @foreach ($categories as $category)
           <tr>
             <th>{{ $category->id }}</th>
-            <td>{{ $category->category_id }}</td>
+            <td>{{ $category->name }}</td>
           </tr>
           @endforeach
         </tbody>
@@ -29,8 +29,8 @@
         <div class="well">
           {!! Form::open(['route' => 'cat.store', 'method' => 'POST']) !!}
             <h2>nieuwe categorie</h2>
-            {{ Form::label('category_id', 'categorie naam:') }}
-            {{ Form::text('category_id', null, ['class' => 'form-control']) }}
+            {{ Form::label('name', 'categorie naam:') }}
+            {{ Form::text('name', null, ['class' => 'form-control']) }}
 
               {{ Form::submit('maak nieuwe categorie', ['class' => 'btn btn-primary btn-block btn-h1-spacing']) }}
 

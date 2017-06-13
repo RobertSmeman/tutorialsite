@@ -42,14 +42,14 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
+
         $this->validate($request, array(
-          'category_id' => 'required|max:255'
+          'name' => 'required|max:255'
         ));
 
-        $categories = new Category;
+        $category = Category::create($request->all());
 
-        $categories->category_id = $request->category_id;
-        $categories->save();
+        $category->save();
 
         Session::flash('success', 'New Category has been created');
 
