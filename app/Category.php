@@ -9,6 +9,6 @@ class Category extends Model
     protected $table = 'categories';
 
     public function entries(){
-        return $this->hasMany('App\category');
+        return $this->hasOne('App\Category');
     }
 }

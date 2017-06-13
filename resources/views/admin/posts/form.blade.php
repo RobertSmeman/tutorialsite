@@ -20,7 +20,7 @@
     </div>
 </div>
 <div class="form-group {{ $errors->has('category') ? 'has-error' : ''}}">
-  {{ Form::label('category', 'Categorie') }}
+  {{ Form::label('category', 'Categorie', ['class' => 'col-md-4 control-label']) }}
     <div class="col-md-6">
         <select class="form-control" name="category">
             @foreach($categories as $category)
