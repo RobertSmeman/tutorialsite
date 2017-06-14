@@ -23,7 +23,7 @@
     <div class="card-block">
       <h4 class="card-title">{{ $post->title }}</h4>
       <p class="card-text">{{ $post->content }}</p>
-      <p class="card-text"><small class="text-muted">{{ $post->category }}</small></p>
+      <p class="card-text"><small class="text-muted">{{ $post->category->name }}</small></p>
     </div>
       </a>
   </div>

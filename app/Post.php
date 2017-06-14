@@ -25,7 +25,14 @@ class Post extends Model
      *
      * @var array
      */
-    protected $fillable = ['title', 'content', 'category', 'upload'];
+    protected $fillable = ['title', 'content', 'category_id', 'upload'];
 
+    /**
+    * Get the category record associated with the post.
+    */
+    public function category()
+    {
+      return $this->belongsTo('App\Category');
+    }
 
 }

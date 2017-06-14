@@ -23,7 +23,6 @@
                             </span>
                         </div>
                         {!! Form::close() !!}
-
                         <br/>
                         <br/>
                         <div class="table-responsive">
@@ -31,13 +30,16 @@
                                 <thead>
                                     <tr>
                                         <th>ID</th><th>Titel</th><th>Beschrijving</th><th>Categorie</th><th>Actie</th>
+
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($posts as $item)
                                     <tr>
                                         <td>{{ $item->id }}</td>
-                                        <td>{{ $item->title }}</td><td>{{ $item->content }}</td><td>{{ $item->category->category_id }}</td>
+                                        <td>{{ str_limit($item->title, 20) }}</td>
+                                        <td>{{ str_limit($item->content, 50) }}</td>
+                                        <td>{{ str_limit($item->category->name, 20) }}</td>
                                         <td>
                                             <a href="{{ url('/admin/' . $item->id) }}" title="View Post"><button class="btn btn-info btn-xs"><i class="fa fa-eye" aria-hidden="true"></i> Bekijken</button></a>
                                             <a href="{{ url('/admin/' . $item->id . '/edit') }}" title="Edit Post"><button class="btn btn-primary btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Bewerken</button></a>
@@ -54,12 +56,12 @@
                                                 )) !!}
                                             {!! Form::close() !!}
                                         </td>
+
                                     </tr>
                                 @endforeach
                                 </tbody>
                             </table>
-                            <div class="pagination-wrapper"> {!! $posts->appends(['search' => Request::get('search')])->render() !!} </div>
-                        </div>
+                         </div>
 
                     </div>
                 </div>

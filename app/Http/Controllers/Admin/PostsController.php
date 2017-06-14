@@ -31,13 +31,12 @@ class PostsController extends Controller
         if (!empty($keyword)) {
             $posts = Post::where('title', 'LIKE', "%$keyword%")
 				->orWhere('content', 'LIKE', "%$keyword%")
-				->orWhere('category', 'LIKE', "%$keyword%")
+				->orWhere('category_id', 'LIKE', "%$keyword%")
 				->paginate($perPage);
         } else {
-            $posts = Post::paginate($perPage);
+            $posts = Post::with('category')->get();
         }
-        $categories = Category::all();
-        return view('admin.posts.index', compact('posts'))->withCategories($categories);
+        return view('admin.posts.index', compact('posts'));
     }
 
     /**
@@ -60,12 +59,13 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-
-        $posts = new Post;
-
-        $posts->title = $request->title;
-        $posts->content = $request->content;
-        $posts->category = $request->category;
+        // dd($request);
+        $post = Post::create($request->all());
+        // $posts = new Post;
+        //
+        // $posts->title = $request->title;
+        // $posts->content = $request->content;
+        // $posts->category = $request->category;
 
         if ($request->hasFile('upload')) {
         $image = $request->file('upload');
@@ -73,10 +73,10 @@ class PostsController extends Controller
         $location = public_path('images/' . $filename);
         Image::make($image)->resize(1500, 800)->save($location);
 
-        $posts->upload = $filename;
+        $post->upload = $filename;
         }
 
-        $posts->save();
+        $post->save();
 
         Session::flash('flash_message', 'Post added!');
 
