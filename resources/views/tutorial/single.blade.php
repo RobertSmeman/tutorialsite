@@ -25,6 +25,7 @@
 <div id="2" class="tabcontent">
   <h3>Snippets</h3>
   <p>shwoarma.</p>
+  <img src="{{ asset('img/spongebob.jpg')}}" alt="">
 </div>
 
 

@@ -38,8 +38,8 @@
                                     <tr>
                                         <td>{{ $item->id }}</td>
                                         <td>{{ str_limit($item->title, 20) }}</td>
-                                        <td>{{ str_limit($item->content, 50) }}</td>
-                                        <td>{{ str_limit($item->category->name, 20) }}</td>
+                                        <td>{{ str_limit($item->content, 40) }}</td>
+                                        <td>{{ str_limit($item->category->name, 10) }}</td>
                                         <td>
                                             <a href="{{ url('/admin/' . $item->id) }}" title="View Post"><button class="btn btn-info btn-xs"><i class="fa fa-eye" aria-hidden="true"></i> Bekijken</button></a>
                                             <a href="{{ url('/admin/' . $item->id . '/edit') }}" title="Edit Post"><button class="btn btn-primary btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Bewerken</button></a>
