@@ -10,13 +10,14 @@
 
     <title>admin</title>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="css/passwordscheck.css" /><!-- Include Your CSS file here-->
-    <script src="js/passwordscheck.js"></script><!-- Include Your jQUery file here-->
+    <link rel="stylesheet" href="/css/passwordscheck.css" /><!-- Include Your CSS file here-->
+    <script src="/js/passwordscheck.js"></script><!-- Include Your jQUery file here-->
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="/css/admin.css" rel="stylesheet">
     <!-- Scripts -->
+
     <script>
         window.Laravel = {!! json_encode([
             'csrfToken' => csrf_token(),

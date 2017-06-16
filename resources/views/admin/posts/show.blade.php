@@ -30,7 +30,7 @@
                         <div class="table-responsive">
                             <table class="table table-borderless">
                                 <tbody>
-                                  @foreach($categories as $category)
+
                                     <tr>
                                         <th>ID</th><td>{{ $post->id }}</td>
                                     </tr>
@@ -48,9 +48,8 @@
                                     </tr>
                                     <tr>
                                       <th> Category </th>
-                                      <td> {{ $category->name }} </td>
+                                      <td> {{ $post->category->name }} </td>
                                     </tr>
-                                  @endforeach
                                 </tbody>
                             </table>
                         </div>

@@ -39,7 +39,7 @@
                             </div>
                         </div>
                         <div class="col-md-12 form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label"><span id="result">Wachtwoord</span></label>
+                            <label for="password" class="col-md-4 control-label"><span id="result"></span>&nbsp;Wachtwoord</label>
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="col-md-12 form-control" name="password" required>
@@ -48,7 +48,7 @@
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
                                 @endif
-        
+
                             </div>
 
                         </div>

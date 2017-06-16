@@ -69,7 +69,7 @@ class PostsController extends Controller
 
         if ($request->hasFile('upload')) {
           $this->validate($request, [
-              'upl' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+              'upload' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
           ]);
         $image = $request->file('upload');
         $filename = time() . '.' . $image->getClientOriginalExtension();

@@ -15,7 +15,7 @@ return [
 
     'password' => 'Wachtwoorden moeten misntens 6 tekens lang zijn.',
     'reset' => 'Je Wachtwoord is gereset!',
-    'sent' => 'We hebben je e-mail reset link gemaild!',
+    'sent' => 'We hebben een reset link naar je email gestuurd!',
     'token' => 'Dit wachtwoord reset token is niet geldig.',
     'user' => "We kunnen geen gebruiker met dat e-mail adres vinden.",
 

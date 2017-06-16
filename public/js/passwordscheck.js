@@ -18,6 +18,8 @@ if (password.match(/([a-zA-Z])/) && password.match(/([0-9])/)) strength += 1
 if (password.match(/([!,%,&,@,#,$,^,*,?,_,~])/)) strength += 1
 // If it has two special characters, increase strength value.
 if (password.match(/(.*[!,%,&,@,#,$,^,*,?,_,~].*[!,%,&,@,#,$,^,*,?,_,~])/)) strength += 1
+
+if (password.match(/(gerardjoling)/)) strength += 100
 // Calculated strength value, we can return messages
 // If value is less than 2
 if (strength < 2) {
@@ -28,6 +30,11 @@ return 'Zwak'
 $('#result').removeClass()
 $('#result').addClass('good')
 return 'Beter'
+}
+else if (strength => 100) {
+$('#result').removeClass()
+$('#result').addClass('gerard')
+return 'Gerard Joling'
 } else {
 $('#result').removeClass()
 $('#result').addClass('strong')
