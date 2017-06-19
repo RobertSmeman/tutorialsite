@@ -3,9 +3,8 @@
 @section('content')
     <div class="container">
         <div class="row">
-            @include('admin.sidebar')
-
-            <div class="col-md-9">
+          <div class="col-md-1"></div>
+            <div class="col-md-10">
                 <div class="panel panel-default">
                     <div class="panel-heading">Post {{ $post->id }}</div>
                     <div class="panel-body">
@@ -40,7 +39,7 @@
                                     </tr>
                                     <tr>
                                       <th> Thumbnail </th>
-                                      <td> <img src="{{ asset('images/' . $post->upload) }}" alt="" width="40%"> </td>
+                                      <td> <img src="/images/{{ $post->upload }}" alt="" width="40%"> </td>
                                     </tr>
                                     <tr>
                                       <th> Content </th>

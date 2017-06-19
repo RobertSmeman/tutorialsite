@@ -10,6 +10,8 @@ use Illuminate\Http\Request;
 use App\Category;
 use Session;
 use Image;
+use Storage;
+use Input;
 
 class PostsController extends Controller
 {
@@ -36,6 +38,7 @@ class PostsController extends Controller
         } else {
             $posts = Post::with('category')->get();
         }
+        $posts = Post::paginate(6);
         return view('admin.posts.index', compact('posts'));
     }
 
@@ -72,11 +75,12 @@ class PostsController extends Controller
               'upload' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
           ]);
         $image = $request->file('upload');
-        $filename = time() . '.' . $image->getClientOriginalExtension();
+        $filename = $post->id . '.' . Input::file('upload')->getClientOriginalExtension();
         $location = public_path('images/' . $filename);
-        Image::make($image)->resize(1500, 800)->save($location);
+        Image::make(Input::file('upload'))->resize(1500, 800)->save($location);
 
         $post->upload = $filename;
+
         }
 
         $post->save();
@@ -97,6 +101,7 @@ class PostsController extends Controller
     {
 
         $post = Post::find($id);
+        dd($post);
         $categories = Category::all();
         return view('admin.posts.show', compact('post', 'categories'));
     }
@@ -128,10 +133,20 @@ class PostsController extends Controller
 
         $requestData = $request->all();
 
+
+
         $post = Post::findOrFail($id);
+
+        $image = Input::file('upload');
+        $filename  = $post->id . '.' . Input::file('upload')->getClientOriginalExtension();
+        $location = public_path('images/' . $filename);
+        Image::make(Input::file('upload'))->resize(1500, 800)->save($location);
+
+        $post->upload = $filename;
+        $post->save();
         $post->update($requestData);
 
-        Session::flash('flash_message', 'Post updated!');
+
 
         return redirect('admin');
     }

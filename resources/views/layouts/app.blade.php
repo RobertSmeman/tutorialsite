@@ -10,12 +10,13 @@
 
     <title>admin</title>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="/css/passwordscheck.css" /><!-- Include Your CSS file here-->
-    <script src="/js/passwordscheck.js"></script><!-- Include Your jQUery file here-->
     <!-- Styles -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link href="/css/app.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="/css/admin.css" rel="stylesheet">
+    <link href="/css/sidebar_menu.css" rel="stylesheet">
+    @yield('styles')
     <!-- Scripts -->
 
     <script>
@@ -31,63 +32,68 @@
                 <div class="navbar-header">
 
                     <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
 
+
+                    <div class="menu">
+
+  <!-- Menu icon -->
+
+  <div class="icon-close"> <i class="fa fa-close"></i></div>
+
+  <!-- Menu -->
+  @if (Auth::guest())
+
+  @else
+<ul>
+  <li>Hallo  {{ Auth::user()->name }}</li>
+</ul>
+      @endif
+  <ul>
+    <li><a href="{{ url('/register') }}">Registreren</a></li>
+    <li role="presentation"> <a href="{{ url('/cat') }}"> Maak een nieuwe categorie</a>
+    </li>
+    <li><a href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> Uitloggen </a>
+    <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+            {{ csrf_field() }}
+    </form>
+    </li>
+  </ul>
+</div>
+</div>
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
                         <h3 class='logo'>Dhévak</h3>
                     </a>
-                </div>
 
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
-                    </ul>
+
+                    <div class=" icon-menu-1">
+
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
 
                         @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                  Hallo  {{ Auth::user()->name }}<span class="caret"></span>
-                                </a>
+                        <li class="icon-menu"><i class="fa fa-bars" aria-hidden="true"></i></li>
 
-                                <ul class="dropdown-menu" role="menu">
-
-                                      <li><a href="{{ url('/register') }}">Registreren</a></li>
-                                      <li role="separator" class="divider"></li>
-                                    <li>
-                                        <a href="{{ url('/logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Uitloggen
-                                        </a>
-
-                                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
                                 </ul>
-                            </li>
-                        @endif
-                    </ul>
-                </div>
-            </div>
-        </nav>
 
+                        @endif
+                        </div>
+
+
+        </nav>
+  </div>
         @yield('content')
-    </div>
+
+
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>
+    <script src="/js/sidebar_menu.js"></script>
+
+
 </body>
 </html>

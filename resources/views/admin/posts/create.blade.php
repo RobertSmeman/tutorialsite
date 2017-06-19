@@ -3,9 +3,8 @@
 @section('content')
     <div class="container">
         <div class="row">
-            @include('admin.sidebar')
-
-            <div class="col-md-9">
+          <div class="col-md-1"></div>
+            <div class="col-md-10">
                 <div class="panel panel-default">
                     <div class="panel-heading">Maak nieuw blokje</div>
                     <div class="panel-body">
@@ -22,8 +21,10 @@
                         @endif
 
                         {!! Form::open(['url' => '/admin', 'class' => 'form-horizontal', 'files' => true]) !!}
-
+                        
                         @include ('admin.posts.form')
+
+
 
                         {!! Form::close() !!}
 
@@ -32,4 +33,5 @@
             </div>
         </div>
     </div>
+
 @endsection

@@ -3,9 +3,8 @@
 @section('content')
     <div class="container">
         <div class="row">
-            @include('admin.sidebar')
-
-            <div class="col-md-9">
+          <div class="col-md-1"></div>
+            <div class="col-md-10">
                 <div class="panel panel-default">
                     <div class="panel-heading">Bewerk Blokje #{{ $post->id }}</div>
                     <div class="panel-body">
@@ -27,7 +26,7 @@
                             'class' => 'form-horizontal',
                             'files' => true
                         ]) !!}
-
+                        
                         @include ('admin.posts.form', ['submitButtonText' => 'Update'])
 
                         {!! Form::close() !!}

@@ -1,5 +1,12 @@
 @extends('layouts.app')
 
+@section('styles')
+
+<link rel="stylesheet" href="/css/passwordscheck.css" /><!-- Include Your CSS file here-->
+<script src="/js/passwordscheck.js"></script><!-- Include Your jQUery file here-->
+
+@endsection
+
 @section('content')
 <div class="container">
     <div class="row">
