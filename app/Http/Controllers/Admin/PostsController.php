@@ -101,7 +101,6 @@ class PostsController extends Controller
     {
 
         $post = Post::find($id);
-        dd($post);
         $categories = Category::all();
         return view('admin.posts.show', compact('post', 'categories'));
     }
@@ -115,7 +114,7 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        $post = Post::findOrFail($id);
+        $post = Post::find($id);
         $categories = Category::all();
         return view('admin.posts.edit', compact('post'))->withCategories($categories);
     }
@@ -133,8 +132,6 @@ class PostsController extends Controller
 
         $requestData = $request->all();
 
-
-
         $post = Post::findOrFail($id);
 
         $image = Input::file('upload');
@@ -143,10 +140,8 @@ class PostsController extends Controller
         Image::make(Input::file('upload'))->resize(1500, 800)->save($location);
 
         $post->upload = $filename;
+
         $post->save();
-        $post->update($requestData);
-
-
 
         return redirect('admin');
     }
