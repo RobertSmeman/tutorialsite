@@ -4,7 +4,6 @@
     @include('partials._head')
 
     @yield('style')
-
     @yield('javascript')
   </head>
   <body>

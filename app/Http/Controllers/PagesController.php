@@ -22,7 +22,8 @@ class PagesController extends Controller
 
     public function tutorial()
     {
-        return view('tutorial.single');
+        $posts = Post::where('snippet');
+        return view('tutorial.single')->withPosts($posts);
     }
 
     /**

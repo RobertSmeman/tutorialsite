@@ -21,7 +21,7 @@
                         @endif
 
                         {!! Form::open(['url' => '/admin', 'class' => 'form-horizontal', 'files' => true]) !!}
-                        
+
                         @include ('admin.posts.form')
 
 

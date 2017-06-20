@@ -20,6 +20,7 @@ class CreatePostsTable extends Migration
             $table->string('title');
             $table->text('content');
             $table->string('upload');
+            $table->text('snippet');
             $table->timestamps();
         });
 
