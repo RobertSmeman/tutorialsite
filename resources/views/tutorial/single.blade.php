@@ -18,7 +18,9 @@
 
 <div id="1" class="tabcontent" style="display: block;">
   <h3>Tutorial</h3>
-{{ $posts->snippet }}
+
+
+{{ $post->snippet }}
 
 <img src="{{ asset('img/geer.png') }}" alt="">
 

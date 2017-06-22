@@ -17,7 +17,7 @@
 
 
   @foreach($posts as $post)
-  <a href="{{ route('tutorial.single') }}">
+  <a href="{{ url('tutorial/' . $post->id) }}">
   <div class="card col-md-3 offset-md-1 spacing-top margin-top">
     <img class="card-img-top img-responsive" width="100%" src="{{ asset('images/' . $post->upload) }}" alt="Card image cap">
     <div class="card-block">

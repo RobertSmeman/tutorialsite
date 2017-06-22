@@ -12,7 +12,7 @@
 */
 
 Route::get('/', 'PagesController@Index');
-Route::get('/tutorial', 'PagesController@Tutorial')->name('tutorial.single');
+Route::get('tutorial', 'PagesController@Show');
 
 Route::resource('cat', 'CategoryController', ['except' => ['create']]);
 Route::resource('admin', 'Admin\\PostsController');
