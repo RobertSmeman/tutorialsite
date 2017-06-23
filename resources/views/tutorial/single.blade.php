@@ -18,18 +18,16 @@
 
 <div id="1" class="tabcontent" style="display: block;">
   <h3>Tutorial</h3>
-
-
-{{ $post->snippet }}
-
-<img src="{{ asset('img/geer.png') }}" alt="">
-
+  <img src="{{ asset('img/spongebob.jpg')}}" alt="">
 </div>
 
 <div id="2" class="tabcontent">
   <h3>Snippets</h3>
-  <p>shwoarma.</p>
-  <img src="{{ asset('img/spongebob.jpg')}}" alt="">
+  
+{!! Form::textarea('snippet', 'snippet', Input::old('snippet')) !!}
+
+
+
 </div>
 
 

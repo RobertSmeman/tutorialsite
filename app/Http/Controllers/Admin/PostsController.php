@@ -81,6 +81,7 @@ class PostsController extends Controller
 
         $post->upload = $filename;
 
+
         }
 
         $post->save();
@@ -140,8 +141,12 @@ class PostsController extends Controller
         Image::make(Input::file('upload'))->resize(1500, 800)->save($location);
 
         $post->upload = $filename;
+        $post->content = $request->input('content');
+        $post->category_id = $request->input('category_id');
+        $post->title = $request->input('title');
+        $post->snippet = $request->input('snippet');
 
-        $post->save();
+        $post->save($requestData);
 
         return redirect('admin');
     }

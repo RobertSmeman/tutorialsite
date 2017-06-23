@@ -12,7 +12,8 @@
 */
 
 Route::get('/', 'PagesController@Index');
-Route::get('tutorial', 'PagesController@Show');
+
+Route::resource('tutorial','PagesController');
 
 Route::resource('cat', 'CategoryController', ['except' => ['create']]);
 Route::resource('admin', 'Admin\\PostsController');
