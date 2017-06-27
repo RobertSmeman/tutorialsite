@@ -5,8 +5,9 @@
 @endsection
 
 @section('javascript')
-<script type="text/javascript" src="{{ asset('js/tabbing.js') }}">
-</script>
+<script type="text/javascript" src="{{ asset('js/tabbing.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/dist/clipboard.min.js') }}"></script>
+
 @endsection
 
 @section('content')
@@ -23,12 +24,23 @@
 
 <div id="2" class="tabcontent">
   <h3>Snippets</h3>
-  
-{!! Form::textarea('snippet', 'snippet', Input::old('snippet')) !!}
 
-
+<div id=foosnippet>
+  <button class="btn" data-clipboard-action="copy" data-clipboard-target="#foo">Copy</button>
+  <textarea id="foo">{{ $posts->snippet }}</textarea>
+</div>
 
 </div>
 
+<script>
+    var clipboard = new Clipboard('.btn');
 
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+    </script>
 @endsection

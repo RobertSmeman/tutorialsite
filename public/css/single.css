@@ -41,3 +41,14 @@ div.tab button.active {
 h3 {
   text-align: center;
 }
+
+#foosnippet {
+  margin-left: 200px;
+  height: 200px;
+  width: 850px;
+}
+
+#foo {
+  height: 200px;
+  width: 800px;
+}

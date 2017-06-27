@@ -49,9 +49,9 @@
 </ul>
       @endif
   <ul>
+    <li><a href="{{ url('/') }}">Home</a></li>
+    <li role="presentation"> <a href="{{ url('/cat') }}"> Maak een nieuwe categorie</a></li>
     <li><a href="{{ url('/register') }}">Registreren</a></li>
-    <li role="presentation"> <a href="{{ url('/cat') }}"> Maak een nieuwe categorie</a>
-    </li>
     <li><a href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> Uitloggen </a>
     <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
             {{ csrf_field() }}
@@ -93,6 +93,7 @@
     <!-- Scripts -->
     <script src="/js/app.js"></script>
     <script src="/js/sidebar_menu.js"></script>
+    <script src="/js/addInput.js" language="Javascript" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     @yield('tabbing')
