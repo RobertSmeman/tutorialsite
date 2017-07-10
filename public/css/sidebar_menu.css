@@ -50,6 +50,7 @@ body {
   padding-bottom: 3px;
   padding-left: 20px;
   padding-top: 3px;
+  color: white;
 }
 
 .menu a {
@@ -90,7 +91,7 @@ body {
 }
 
 h1 {
-color:#fff;
+color: black;
   padding-bottom: 25px;
   padding-left: 25px;
   padding-top: 25px;

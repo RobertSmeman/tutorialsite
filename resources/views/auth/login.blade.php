@@ -1,6 +1,21 @@
 @extends('layouts.app')
 
 @section('content')
+<img src="/img/GerardJoling.png" alt="" width="5%" class="ui-draggable ui-draggable-handle" >
+    <style>
+    img {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+    </style>
+    <script>
+    $(document).ready(function(){
+  $(document).mousemove(function(e){
+    $('img').css('left',e.pageX+"px");
+    $('img').css('top',e.pageY+"px");
+  });
+});
+</script>
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -38,15 +53,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Mij Onthouden
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
+
 
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">

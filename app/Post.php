@@ -11,28 +11,28 @@ class Post extends Model
      *
      * @var string
      */
-    protected $table = 'posts';
+    protected $table = 'posts';   // de tabel posts
 
     /**
     * The database primary key value.
     *
     * @var string
     */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'id';   // (???????)
 
     /**
      * Attributes that should be mass-assignable.
      *
      * @var array
      */
-    protected $fillable = ['title', 'content', 'category_id', 'upload', 'snippet'];
+    protected $fillable = ['title', 'content', 'category_id', 'upload', 'snippet'];   // de onderdelen die moeten worden ingevuld.
 
     /**
     * Get the category record associated with the post.
     */
     public function category()
     {
-      return $this->belongsTo('App\Category');
+      return $this->belongsTo('App\Category');    // heeft iets te maken met Category.php ????????
     }
 
 }

@@ -25,7 +25,7 @@ class ResetPasswordController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = '/';  // je word naar de zelfde pagina gestuurd
 
     /**
      * Create a new controller instance.
@@ -34,6 +34,6 @@ class ResetPasswordController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        $this->middleware('guest');   // alleen toegankelijk als je niet bent ingelogd.
     }
 }

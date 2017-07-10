@@ -32,16 +32,17 @@
 <div class="form-group {{ $errors->has('content') ? 'has-error' : ''}}">
     {!! Form::label('snippet', 'snippet inhoud', ['class' => 'col-md-4 control-label']) !!}
     <div class="col-md-6" id="dynamicInput">
-        {!! Form::textarea('snippet', null, ['class' => 'form-control', 'required' => '']) !!}
+        {!! Form::textarea('snippet', null, ['id' => 'dynamicInput'], ['class' => 'form-control', 'required' => '']) !!}
         {!! $errors->first('snippet', '<p class="help-block">:message</p>') !!}
+        <form method="POST">
+         <div id="dynamicInput">Snippet 1<br><textarea type="text" name="myInputs[]"></textarea></div>
+        </form>
+        <input type="button" value="Add another text area" class="btn btn-primary" onClick="addInput('dynamicInput');">
     </div>
 </div>
 
 
-    <form method="POST">
-     <div id="dynamicInput">Snippet 1<br><textarea type="text" name="myInputs[]"></textarea></div>
-     <input type="button" value="Add another text area" onClick="addInput('dynamicInput');">
-    </form>
+
 
 
 <div class="form-group">

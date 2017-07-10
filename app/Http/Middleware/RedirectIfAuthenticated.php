@@ -18,9 +18,9 @@ class RedirectIfAuthenticated
     public function handle($request, Closure $next, $guard = null)
     {
         if (Auth::guard($guard)->check()) {
-            return redirect('/home');
+            return redirect('/');   // als je gegevens overeen komen word je geredirect.
         }
 
-        return $next($request);
+        return $next($request);   // als je gegevels niet overeen komen kan je een volgende request doorgeven.
     }
 }

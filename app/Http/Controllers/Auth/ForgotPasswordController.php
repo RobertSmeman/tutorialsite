@@ -18,7 +18,7 @@ class ForgotPasswordController extends Controller
     |
     */
 
-    use SendsPasswordResetEmails;
+    use SendsPasswordResetEmails;   // locatie is: vendor\laravel\framework\src\illuminate\foundation\auth
 
     /**
      * Create a new controller instance.
@@ -27,6 +27,6 @@ class ForgotPasswordController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        $this->middleware('guest');   // alleen toegankelijk voor mensen die niet zijn ingelogd.
     }
 }

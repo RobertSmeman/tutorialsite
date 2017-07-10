@@ -14,8 +14,13 @@ class PagesController extends Controller
    */
   public function index()
  {
-   $posts = Post::paginate(6);
-     return view('pages.welcome')->withPosts($posts);
+   $posts = Post::paginate(6);    // 6 onderdelen per pagina.
+     return view('pages.welcome')->withPosts($posts);   // hier word je naar de welcome page gestuurd dat is de localhost:8000 page. WithPosts want hier komen ze te staan.
+ }
+
+ public function gerard()
+ {
+   return view('gerard.gerard');    // hier word je naar de gerard page gestuurd. dat is de page die je krijgt als je succesvol bent ingelogd.
  }
  /**
    * Show the form for creating a new resource.
@@ -38,8 +43,8 @@ class PagesController extends Controller
   }
    public function show($id)
     {
-        $posts = Post::find($id);
-        return view('tutorial.single')->withPosts($posts);
+        $posts = Post::find($id);   // hier pakt ie de posts met het bijbehorende id.
+        return view('tutorial.single')->withPosts($posts);    //hier ga je naar de tutorial page. dat is de page die je krijgt als je op een blokje (post) klikt in de welcome page. 
     }
     /**
      * Show the form for editing the specified resource.

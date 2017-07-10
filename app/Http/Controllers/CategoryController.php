@@ -15,13 +15,13 @@ class CategoryController extends Controller
      * @return \Illuminate\Http\Response
      */
      public function __construct() {
-       $this->middleware('auth');
+       $this->middleware('auth');   // alleen toegankelijk als je bent ingelogd.
      }
 
     public function index()
     {
-        $categories = Category::with('entries')->get();
-        return view('categories.index', compact($categories, 'categories'));
+        $categories = Category::with('entries')->get();   // (???????)
+        return view('categories.index', compact($categories, 'categories'));    // gaat naar de cat page.
     }
 
     /**
@@ -45,15 +45,15 @@ class CategoryController extends Controller
 
         $this->validate($request, array(
           'name' => 'required|max:255'
-        ));
+        ));   // hier word gekeken dat de input niet langer is dan 255 tekens.
 
-        $category = Category::create($request->all());
+        $category = Category::create($request->all());    // (???????)
 
-        $category->save();
+        $category->save();    // hier word het opgeslagen.
 
-        Session::flash('success', 'New Category has been created');
+        Session::flash('success', 'Nieuwe categorie is gemaakt.');   // hier krijg je een berichtje als er een nieuwe categorie is gemaakt.
 
-        return redirect()->route('cat.index');
+        return redirect()->route('cat.index');    // hier word je naar de cat page gestuurd.
     }
 
     /**

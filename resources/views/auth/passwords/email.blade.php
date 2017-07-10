@@ -7,6 +7,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Reset Wachtwoord</div>
                 <div class="panel-body">
+                  <a href="{{ url('/login') }}" title="Back"><button class="btn btn-warning btn-xs"><i class="fa fa-arrow-left" aria-hidden="true"></i> Terug</button></a>
                     @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}

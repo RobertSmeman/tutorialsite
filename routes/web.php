@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'PagesController@Index');
+Route::get('succes', 'PagesController@gerard');
 
 Route::resource('tutorial','PagesController');
 
@@ -19,5 +20,3 @@ Route::resource('cat', 'CategoryController', ['except' => ['create']]);
 Route::resource('admin', 'Admin\\PostsController');
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

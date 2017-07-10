@@ -28,14 +28,13 @@
                             <table class="table table-borderless">
                                 <thead>
                                     <tr>
-                                        <th>ID</th><th>Titel</th><th>Beschrijving</th><th>Categorie</th><th>Actie</th>
+                                        <th>Titel</th><th>Beschrijving</th><th>Categorie</th><th>Actie</th>
 
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($posts as $item)
                                     <tr>
-                                        <td>{{ $item->id }}</td>
                                         <td>{{ str_limit($item->title, 20) }}</td>
                                         <td>{{ str_limit($item->content, 40) }}</td>
                                         <td>{{ str_limit($item->category->name, 10) }}</td>

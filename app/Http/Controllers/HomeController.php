@@ -13,7 +13,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        $this->middleware('guest');   // alleen toegeankelijk als je niet bent ingelogd.
     }
 
     /**
@@ -23,6 +23,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('home');    // hier word je naar de home page gestuurd. (deze pagina gebruiken wij niet maar we worden er soms toch naar toe gestuurd. hoe kan dat????)
     }
 }
