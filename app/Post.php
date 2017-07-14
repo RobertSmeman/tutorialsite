@@ -25,7 +25,7 @@ class Post extends Model
      *
      * @var array
      */
-    protected $fillable = ['title', 'content', 'category_id', 'upload', 'snippet'];   // de onderdelen die moeten worden ingevuld.
+    protected $fillable = ['title', 'content', 'category_id', 'upload'];   // de onderdelen die moeten worden ingevuld.
 
     /**
     * Get the category record associated with the post.

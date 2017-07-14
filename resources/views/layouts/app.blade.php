@@ -45,7 +45,7 @@
 
   @else
 <ul>
-  <li>Hallo  {{ Auth::user()->name }}</li>
+  <li>Hallo  {{ Auth::user()->name }} {{ Auth::user()->surname }}</li>
 </ul>
       @endif
   <ul>

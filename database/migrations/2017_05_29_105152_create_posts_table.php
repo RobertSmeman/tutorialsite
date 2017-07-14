@@ -20,7 +20,7 @@ class CreatePostsTable extends Migration
             $table->string('title');    // title is een sring dus stuk tekst met alle tekens mogelijk.
             $table->text('content');    // content is een stuk tekst.
             $table->string('upload');   // upload is een string en nu weet ik niet meer wat dat is ???????
-            $table->text('snippet');    // snippet is een stuk tekst. is dat wel goed??
+               // snippet is een stuk tekst. is dat wel goed??
             $table->timestamps();   // created at en updated at timestamps.
         });
 

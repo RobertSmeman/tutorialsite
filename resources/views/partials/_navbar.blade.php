@@ -12,7 +12,7 @@
     <li class="form-inline my-2 my-lg-0">
       @if(Auth::check())
                  <li class="dropdown">
-                  <a href="/" class="dropdown-toggle back" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hallo {{ Auth::user()->name }} <span class="caret"></span></a>
+                  <a href="/" class="dropdown-toggle back" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hallo {{ Auth::user()->name }} {{ Auth::user()->surname }} <span class="caret"></span></a>
                   <ul class="dropdown-menu dropdownlist">
                       <li><a href="{{ url('/admin') }}">Admin</a></li>
                       <li role="separator" class="divider"></li>

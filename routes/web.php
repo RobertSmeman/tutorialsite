@@ -12,7 +12,7 @@
 */
 
 Route::get('/', 'PagesController@Index');
-Route::get('succes', 'PagesController@gerard');
+Route::get('succes', 'PagesController@gerard')->middleware('auth');
 
 Route::resource('tutorial','PagesController');
 

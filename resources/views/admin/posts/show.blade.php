@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.app')   <!-- gebruikt layouts.app (???????)-->
 
-@section('content')
+@section('content')   <!--dit gedeelte is een section met de naam content. de sectin kan je ergens anders weer invoegen met yield. yield('content')-->
     <div class="container">
         <div class="row">
           <div class="col-md-1"></div>

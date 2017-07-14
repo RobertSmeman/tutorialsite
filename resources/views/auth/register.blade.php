@@ -19,7 +19,7 @@
                         {{ csrf_field() }}
 
                         <div class="col-md-12 form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                            <label for="name" class="col-md-4 control-label">Naam</label>
+                            <label for="name" class="col-md-4 control-label">Voornaam</label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
@@ -27,6 +27,20 @@
                                 @if ($errors->has('name'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 form-group{{ $errors->has('surname') ? ' has-error' : '' }}">
+                            <label for="surname" class="col-md-4 control-label">Achternaam</label>
+
+                            <div class="col-md-6">
+                                <input id="surname" type="text" class="form-control" name="surname" value="{{ old('surname') }}" required autofocus>
+
+                                @if ($errors->has('surname'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('surname') }}</strong>
                                     </span>
                                 @endif
                             </div>

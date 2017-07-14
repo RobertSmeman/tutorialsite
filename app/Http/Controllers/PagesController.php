@@ -44,7 +44,7 @@ class PagesController extends Controller
    public function show($id)
     {
         $posts = Post::find($id);   // hier pakt ie de posts met het bijbehorende id.
-        return view('tutorial.single')->withPosts($posts);    //hier ga je naar de tutorial page. dat is de page die je krijgt als je op een blokje (post) klikt in de welcome page. 
+        return view('tutorial.single')->withPosts($posts);    //hier ga je naar de tutorial page. dat is de page die je krijgt als je op een blokje (post) klikt in de welcome page.
     }
     /**
      * Show the form for editing the specified resource.

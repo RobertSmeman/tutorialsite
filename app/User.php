@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',    // de onderdelen die moeten worden ingevuld bij het make nvan een nieuw account.
+        'name', 'surname', 'email', 'password',    // de onderdelen die moeten worden ingevuld bij het make nvan een nieuw account.
     ];
 
     /**
@@ -24,6 +24,6 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',   // deze onderdelen worden verborgen zodat niet zomaar iedereen ze kan lezen.
+        'password', 'remember_token',   // deze onderdelen worden verborgen zodat niet zomaar iedereen ze kan lezen. (???????)
     ];
 }

@@ -144,7 +144,7 @@ class PostsController extends Controller
         $post->content = $request->input('content');    // in de kolom content komt de text te staan die in content is gezet.
         $post->category_id = $request->input('category_id');    // in category kunnen meerdere categorieën staan dus word met de id de juiste gekozen.
         $post->title = $request->input('title');    // in de kolom title komt de text te staan die in title is gezet.
-        $post->snippet = $request->input('snippet');    // in de kolom snippet komt de text te staan die in snippet is gezet.
+            // in de kolom snippet komt de text te staan die in snippet is gezet.
 
         $post->save($requestData);    // hier word alles opgeslagen.
 
