@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="/css/admin.css" rel="stylesheet">
     <link href="/css/sidebar_menu.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/single.css') }}">
     @yield('styles')
     <!-- Scripts -->
 
@@ -96,6 +97,8 @@
     <script src="/js/addInput.js" language="Javascript" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{{ asset('js/tabbing.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/dist/clipboard.min.js') }}"></script>
     @yield('tabbing')
 </body>
 </html>

@@ -29,6 +29,13 @@
         </select>
     </div>
 </div>
+<div class="form-group {{ $errors->has('title') ? 'has-error' : ''}}">
+    {!! Form::label('snippet', 'Snippet', ['class' => 'col-md-4 control-label']) !!}    <!--maakt een label met de naam Titel-->
+    <div class="col-md-6">
+        {!! Form::text('snippet', null, ['class' => 'form-control', 'required' => '']) !!}    <!--maakt een form stukje waar je tekst kan invullen-->
+        {!! $errors->first('snippet', '<p class="help-block">:message</p>') !!}   <!--geeft een error bericht als de form een error heeft.-->
+    </div>
+</div>
 
 <div class="form-group">
     <div class="col-md-offset-4 col-md-4">

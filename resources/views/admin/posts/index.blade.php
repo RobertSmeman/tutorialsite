@@ -8,7 +8,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Blokjes</div>
                     <div class="panel-body">
-                        <a href="{{ url('/admin/create') }}" class="btn btn-success btn-sm" title="Add New Post"><i class="fa fa-plus" aria-hidden="true"></i> Nieuwe toevoegen</a>   <!--link die je naar create stuurd waar je een form krijgt om en nieuw blokje te maken-->
+                        <a href="{{ url('/admin/create') }}" class="btn btn-success btn-sm" title="Add New Post"><i class="fa fa-plus" aria-hidden="true"></i> Nieuwe tutorial toevoegen</a>   <!--link die je naar create stuurd waar je een form krijgt om en nieuw blokje te maken-->
 
                         {!! Form::open(['method' => 'GET', 'url' => '/admin', 'class' => 'navbar-form navbar-right', 'role' => 'search'])  !!}    <!--opend de form voor de search functie (search werkt niet)-->
                         <div class="input-group">

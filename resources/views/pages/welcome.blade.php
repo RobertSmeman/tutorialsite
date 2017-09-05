@@ -12,7 +12,7 @@
 
 
 
-<h3 class="title spacing-top">Tutorial:</h3>
+<h3 class="title spacing-top">Tutorials:</h3>
 <div class="row col-md-12 justify-content-center spacing-top just">
 
 

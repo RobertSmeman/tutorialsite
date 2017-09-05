@@ -7,6 +7,12 @@ div.tab {
     background-color: #f1f1f1;
 }
 
+div.tabbing {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
 /* Style the buttons inside the tab */
 div.tab button {
     background-color: inherit;
@@ -21,13 +27,34 @@ div.tab button {
     height: 200px;
 }
 
+div.tabbing button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 40px;
+    width: 16%;
+    height: 100px;
+}
+
 /* Change background color of buttons on hover */
 div.tab button:hover {
     background-color: #ddd;
 }
 
+div.tabbing button:hover {
+    background-color: #ddd;
+}
+
 /* Create an active/current tablink class */
 div.tab button.active {
+    background-color: #ccc;
+}
+
+div.tabbing button.active {
     background-color: #ccc;
 }
 

@@ -7,7 +7,6 @@
 @section('javascript')
 <script type="text/javascript" src="{{ asset('js/tabbing.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/dist/clipboard.min.js') }}"></script>
-
 @endsection
 
 @section('content')
@@ -19,7 +18,7 @@
 
 <div id="1" class="tabcontent" style="display: block;">
   <h3>Tutorial</h3>
-  <img src="{{ asset('img/spongebob.jpg')}}" alt="">
+  <h1>test</h1>
 </div>
 
 <div id="2" class="tabcontent">
