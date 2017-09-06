@@ -14,14 +14,7 @@
           @endsection
 
           @section('content')
-          <div class="tabbing">
-            <button class="tablinks active" onclick="openTab(event, '1')">Blokje</button>
-            <button class="tablinks" onclick="openTab(event, '2')">Overview</button>
-            <button class="tablinks" onclick="openTab(event, '3')">Controller</button>
-            <button class="tablinks" onclick="openTab(event, '4')">Migration</button>
-            <button class="tablinks" onclick="openTab(event, '5')">Model</button>
-            <button class="tablinks" onclick="openTab(event, '6')">View</button>
-          </div>
+
 
           <div id="1" class="tabcontent" style="display: block;">
             <div class="col-md-1"></div>

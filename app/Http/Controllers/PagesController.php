@@ -79,4 +79,10 @@ class PagesController extends Controller
     {
         //
     }
+
+    public function admin()
+   {
+     $posts = Post::paginate(6);    // 6 onderdelen per pagina.
+       return view('pages.overview')->withPosts($posts);   // hier word je naar de welcome page gestuurd dat is de localhost:8000 page. WithPosts want hier komen ze te staan.
+   }
 }

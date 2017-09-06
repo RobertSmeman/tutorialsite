@@ -10,15 +10,13 @@
 
 <h1 class="display-3 logo">Dhévak</h1>
 
-
-
 <h3 class="title spacing-top">Tutorials:</h3>
 <div class="row col-md-12 justify-content-center spacing-top just">
 
 
   @foreach($posts as $post)
   <a href="{{ url('tutorial/' . $post->id) }}">
-  <div class="card col-md-3 offset-md-1 spacing-top margin-top">
+  <div class="card col-md-3 offset-md-1 padding-remove margin-top">
     <img class="card-img-top img-responsive" width="100%" src="{{ asset('images/' . $post->upload) }}" alt="Card image cap">
     <div class="card-block">
       <h4 class="card-title">{{ str_limit($post->title, 20) }}</h4>
@@ -30,17 +28,10 @@
 
         @endforeach
 
+</div>
+    <div class="col-md-6 offset-md-6 spacing-top">
+        <div class="text-center">
+            {!! $posts->links() !!}
         </div>
-
-
-        <div class="col-md-6 offset-md-6 spacing-top">
-            <div class="text-center">
-                {!! $posts->links() !!}
-            </div>
-        </div>
-
-
-
-
-
+    </div>
 @endsection

@@ -12,11 +12,12 @@
 */
 
 Route::get('/', 'PagesController@Index');
-Route::get('succes', 'PagesController@gerard')->middleware('auth');
+Route::get('succes', 'PagesController@index')->middleware('auth');
 
 Route::resource('tutorial','PagesController');
 
 Route::resource('cat', 'CategoryController', ['except' => ['create']]);
 Route::resource('admin', 'Admin\\PostsController');
+Route::get('admin', 'PagesController@admin');
 
 Auth::routes();

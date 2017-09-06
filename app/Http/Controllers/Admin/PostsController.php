@@ -27,19 +27,6 @@ class PostsController extends Controller
      */
     public function index(Request $request)
     {
-        $keyword = $request->get('search');   //de woorden die je bij search invuld worden als keyword hieronder verwerkt
-        $perPage = 25;    // het aantal blokjes dat in admin staat? word gebruikt vor paginate.
-
-        if (!empty($keyword)) {   // als keyword niet leeg is dan word dit gedeelte uitgevoerd.
-            $posts = Post::where('title', 'LIKE', "%$keyword%")   // hier word gekeken of het keyword overeenkomt met een woord uit de tabel titel.
-				->orWhere('content', 'LIKE', "%$keyword%")    // hier word gekeken of het keyword overeenkomt met een woord uit de tabel content.
-				->orWhere('category_id', 'LIKE', "%$keyword%")    // hier word gekeken of het keyword overeenkomt met een woord uit de tabel category_id.
-				->paginate($perPage);   //zorgd voor de pijltjes en getallen onder aan het scherm voor de pagina's perPage geeft aan hoeveel oderdelen er op een pagina mogen staan.
-        } else {
-            $posts = Post::with('category')->get();   //(?????????)
-        }
-        $posts = Post::paginate(6);   // 6 onderdelen per pagina, (is dit van de homepage?)
-        return view('admin.posts.index', compact('posts'));   //stuurd je naar de admin page met het overzicht van alle blokjes.
     }
 
     /**
@@ -166,4 +153,6 @@ class PostsController extends Controller
 
         return redirect('admin');   // hier word je weer teruggestuurd naar de admin page.
     }
+
+
 }

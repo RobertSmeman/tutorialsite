@@ -59,3 +59,29 @@ a:hover {
   margin-left: 0px;
 }
 }
+
+.deleteknop {
+  font-size: 20px;
+  width: 31px;
+  height: 41px;
+  margin-bottom: 0px;
+  z-index: 2;
+  text-decoration: none;
+}
+
+.padding-remove {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.card-block{
+  padding-right: 2px;
+    padding-bottom: 0px;
+}
+
+
+
+form{
+  height: 0px;
+  z-index: 50;
+}
