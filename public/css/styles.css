@@ -67,6 +67,9 @@ a:hover {
   margin-bottom: 0px;
   z-index: 2;
   text-decoration: none;
+  background-color: transparent;
+  border: none;
+  color: red;
 }
 
 .padding-remove {
@@ -79,7 +82,16 @@ a:hover {
     padding-bottom: 0px;
 }
 
+.createbutton {
+  border-top-right-radius: 0%;
+  border-top-left-radius: 0%;
+  background-color: #31AA1D;
+  border: 0px;
+}
 
+.createbutton:hover {
+  background-color: ;
+}
 
 form{
   height: 0px;

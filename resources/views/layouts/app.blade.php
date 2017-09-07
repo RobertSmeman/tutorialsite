@@ -17,6 +17,7 @@
     <link href="/css/admin.css" rel="stylesheet">
     <link href="/css/sidebar_menu.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/single.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     @yield('styles')
     <!-- Scripts -->
 
@@ -27,66 +28,9 @@
     </script>
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
 
-                    <!-- Collapsed Hamburger -->
+          @include('partials._navbar')
 
-
-                    <div class="menu">
-
-  <!-- Menu icon -->
-
-  <div class="icon-close"> <i class="fa fa-close"></i></div>
-
-  <!-- Menu -->
-  @if (Auth::guest())
-
-  @else
-<ul>
-  <li>Hallo  {{ Auth::user()->name }} {{ Auth::user()->surname }}</li>
-</ul>
-      @endif
-  <ul>
-    <li><a href="{{ url('/') }}">Home</a></li>
-    <li role="presentation"> <a href="{{ url('/cat') }}"> Maak een nieuwe categorie</a></li>
-    <li><a href="{{ url('/register') }}">Registreren</a></li>
-    <li><a href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> Uitloggen </a>
-    <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-            {{ csrf_field() }}
-    </form>
-    </li>
-  </ul>
-</div>
-</div>
-                    <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        <h3 class='logo'>Dhévak</h3>
-                    </a>
-
-                    <!-- Left Side Of Navbar -->
-
-                    <div class=" icon-menu-1">
-
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-right">
-                        <!-- Authentication Links -->
-                        @if (Auth::guest())
-
-                        @else
-                        <li class="icon-menu"><i class="fa fa-bars" aria-hidden="true"></i></li>
-
-                                </ul>
-
-                        @endif
-                        </div>
-
-
-        </nav>
-  </div>
         @yield('content')
 
 

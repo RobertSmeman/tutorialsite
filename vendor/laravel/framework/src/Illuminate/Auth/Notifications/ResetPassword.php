@@ -44,10 +44,9 @@ class ResetPassword extends Notification
      */
     public function toMail($notifiable)
     {
-      // dd(url);
         return (new MailMessage)
-            ->line('Je ontvangt deze email omdat we een wachtwoord reset aanvraag van je account hebben ontvangen.')
+            ->line('You are receiving this email because we received a password reset request for your account.')
             ->action('Reset Password', url(config('app.url').route('password.reset', $this->token, false)))
-            ->line('Als je geen wachtwoord reset hebt aangevraagd zijn er geen verdere handelingen nodig.');
+            ->line('If you did not request a password reset, no further action is required.');
     }
 }

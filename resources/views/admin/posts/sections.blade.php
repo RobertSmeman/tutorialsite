@@ -6,10 +6,10 @@
           <div class="col-md-1"></div>
             <div class="col-md-10">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Bewerk Blokje #{{ $post->id }}</div>   <!--laat de id zien die bij het blokje hoort.-->
+                    <div class="panel-heading">Bewerk section #{{ $post->id }}</div>   <!--laat de id zien die bij het blokje hoort.-->
                     <div class="panel-body">
                         <a href="{{ url('/admin/') }}" title="Back"><button class="btn btn-warning btn-xs"><i class="fa fa-arrow-left" aria-hidden="true"></i> Terug</button></a>   <!--stuurt je terug naar de admin page.-->
-                        <a href="{{ url('/admin/' . $post->id . '/section') }}" title="sections"><button class="btn btn-warning right-side btn-xs">Sections <i class="fa fa-arrow-right" aria-hidden="true"></i> </button></a>
+                        <a href="{{ url('/admin/') }}" title="sections"><button class="btn btn-warning right-side btn-xs">blokje <i class="fa fa-arrow-right" aria-hidden="true"></i> </button></a>
                         <br />
                         <br />
 
@@ -20,12 +20,6 @@
                                 @endforeach
                             </ul>
                         @endif
-
-                        {!! Form::model($post, ['method' => 'PATCH', 'url' => ['/admin', $post->id], 'class' => 'form-horizontal', 'files' => true ]) !!}   <!--opend de form die bij de id hoort.-->
-
-                        @include ('admin.posts.form', ['submitButtonText' => 'Update'])   <!--form.blade.php word  toegevoed=gd, zo krijg je dus de form hierin, ook een button voor de update.-->
-
-                        {!! Form::close() !!}   <!--sluit de form.-->
 
                     </div>
                 </div>

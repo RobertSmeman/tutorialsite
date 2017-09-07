@@ -33,3 +33,17 @@
 .navbar-toggler-right {
   margin-top: 5px;
 }
+
+li
+{
+list-style-type: none;
+float: right;
+}
+
+.navbar-inverse .navbar-brand {
+    color: white;
+}
+
+.right-side{
+  float: right;
+}

@@ -4,7 +4,7 @@
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand navlogo" href="{{ url('/') }}">Dhévak</a>
+  <a class="navbar-brand navlogo" href="{{ url('/') }}">Dhévak <small>wiki</small></a>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
@@ -12,9 +12,11 @@
     <li class="form-inline my-2 my-lg-0">
       @if(Auth::check())
                  <li class="dropdown">
-                  <a href="/" class="dropdown-toggle back" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hallo {{ Auth::user()->name }}<span class="caret"></span></a>
+                  <a href="/" class="dropdown-toggle back" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hallo {{ Auth::user()->name }}</a>
                   <ul class="dropdown-menu dropdownlist">
+                      <li><a href="{{ url('/') }}">Home</a></li>
                       <li><a href="{{ url('/admin') }}">Admin</a></li>
+                      <li role="presentation"> <a href="{{ url('/cat') }}">Nieuwe categorie</a></li>
                       <li role="separator" class="divider"></li>
                       <li><a href="{{ url('/register') }}">Registreren</a></li>
                       <li role="separator" class="divider"></li>

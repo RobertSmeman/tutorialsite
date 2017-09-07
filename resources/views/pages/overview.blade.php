@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-<a href="{{ url('/admin/create') }}" class="btn btn-success btn-block" title="Add New Post"><i class="fa fa-plus" aria-hidden="true"></i></a>
+<a href="{{ url('/admin/create') }}" class="btn btn-success btn-block createbutton" title="Add New Post"><i class="fa fa-plus" aria-hidden="true"></i></a>
 <h1 class="display-3 logo">Dhévak</h1>
 
 
@@ -29,7 +29,7 @@
           ]) !!}    <!-- opend de form gedeelte voor de delete.-->
               {!! Form::button('<i class="fa fa-trash-o" aria-hidden="true"></i> ', array(
                       'type' => 'submit',
-                      'class' => 'offset-md-11 btn btn-danger btn-sm text-right deleteknop',
+                      'class' => 'offset-md-10 text-right deleteknop',
                       'title' => 'Delete Post',
                       'onclick'=>'return confirm("Wilt u dit blokje verwijderen?")'
               )) !!}    <!--dit is de verwijder button, als daar op word geklikt dan komt er een berichtje in beeld waar je kan bevestigen of je het blokje wilt verwijderen-->
@@ -39,7 +39,7 @@
     <div class="card-block">
       <h4 class="card-title">{{ str_limit($post->title, 20) }}</h4>
       <p class="card-text ">{{ str_limit($post->content, 200) }}</p>
-      <p class="card-text"><small class="text-muted">{{ str_limit($post->category->name, 30) }}</small><a href="{{ url('/admin/' . $post->id . '/edit') }}" title="Edit Post"><button class="btn btn-primary btn-sm offset-md-11 editding"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button></a></p>
+      <p class="card-text"><small class="text-muted">{{ str_limit($post->category->name, 30) }}</small><a href="{{ url('/admin/' . $post->id . '/edit') }}" title="Edit Post" class="offset-md-11 editding"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></p>
     </div>
     </a>
 

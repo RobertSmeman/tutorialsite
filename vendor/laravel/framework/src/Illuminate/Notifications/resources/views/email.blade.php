@@ -6,7 +6,7 @@
 @if ($level == 'error')
 # Whoops!
 @else
-# Hallo!
+# Hello!
 @endif
 @endif
 
@@ -45,7 +45,7 @@
 @if (! empty($salutation))
 {{ $salutation }}
 @else
-Regards,<br> Dhévak.
+Regards,<br>{{ config('app.name') }}
 @endif
 
 {{-- Subcopy --}}
