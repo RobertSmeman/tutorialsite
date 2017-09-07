@@ -28,4 +28,16 @@
 }
 
 select.form-control:not([size]):not([multiple]) {
-    height: calc(2.25rem + 10px); 
+    height: calc(2.25rem + 10px);
+}
+    .deleteknop {
+      font-size: 20px;
+      width: 31px;
+      height: 41px;
+      margin-bottom: 0px;
+      z-index: 2;
+      text-decoration: none;
+      background-color: transparent;
+      border: none;
+      color: red;
+    }

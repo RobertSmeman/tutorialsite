@@ -11,16 +11,28 @@
       <table class="table">
         <thead>
           <tr>
-            <th>#</th>
             <th>categorie naam</th>
+            <th style="float:right;">actie</th>
           </tr>
         </thead>
 
         <tbody>
           @foreach ($categories as $category)
           <tr>
-            <th>{{ $category->id }}</th>
             <td>{{ $category->name }}</td>
+            <td>
+            {!! Form::open(['method'=>'DELETE',
+                'url' => ['/cat', $category->id],
+                'style' => 'display:inline'
+            ]) !!}    <!-- opend de form gedeelte voor de delete.-->
+                {!! Form::button('<i class="fa fa-trash-o" aria-hidden="true"></i> ', array(
+                        'type' => 'submit',
+                        'class' => 'offset-md-10 text-right deleteknop',
+                        'title' => 'Delete Post',
+                        'onclick'=>'return confirm("Wilt u dit blokje verwijderen?")'
+                )) !!}    <!--dit is de verwijder button, als daar op word geklikt dan komt er een berichtje in beeld waar je kan bevestigen of je het blokje wilt verwijderen-->
+            {!! Form::close() !!}   <!--form word gesloten-->
+            </td>
           </tr>
           @endforeach
         </tbody>

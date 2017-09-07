@@ -34,7 +34,7 @@
   margin-top: 5px;
 }
 
-li
+#dropdown
 {
 list-style-type: none;
 float: right;
@@ -46,4 +46,8 @@ float: right;
 
 .right-side{
   float: right;
+}
+
+#admindropdown li{
+  text-align: left;
 }

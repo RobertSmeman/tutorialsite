@@ -75,7 +75,7 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+
     }
 
     /**
@@ -87,7 +87,7 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+    
     }
 
     /**
@@ -98,6 +98,10 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+      Category::destroy($id);   // hier word de post met de bijbehorende id verwijderd.
+
+      Session::flash('flash_message', 'Post deleted!');   // als het is verwijderd krijg je dit berichtje in beeld.
+
+      return redirect('cat');
     }
 }

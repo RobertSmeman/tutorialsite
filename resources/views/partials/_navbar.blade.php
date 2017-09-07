@@ -11,16 +11,16 @@
     </ul>
     <li class="form-inline my-2 my-lg-0">
       @if(Auth::check())
-                 <li class="dropdown">
-                  <a href="/" class="dropdown-toggle back" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hallo {{ Auth::user()->name }}</a>
-                  <ul class="dropdown-menu dropdownlist">
-                      <li><a href="{{ url('/') }}">Home</a></li>
-                      <li><a href="{{ url('/admin') }}">Admin</a></li>
+                 <li id="dropdown" class="dropdown">
+                  <a  href="/" class="dropdown-toggle back" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hallo {{ Auth::user()->name }}</a>
+                  <ul class="dropdown-menu dropdownlist" id="admindropdown">
+                      <li role="presentation"><a href="{{ url('/') }}">Home</a></li>
+                      <li role="presentation"><a href="{{ url('/admin') }}">Admin</a></li>
                       <li role="presentation"> <a href="{{ url('/cat') }}">Nieuwe categorie</a></li>
                       <li role="separator" class="divider"></li>
-                      <li><a href="{{ url('/register') }}">Registreren</a></li>
+                      <li role="presentation"><a href="{{ url('/register') }}">Registreren</a></li>
                       <li role="separator" class="divider"></li>
-                      <li>
+                      <li role="presentation">
                           <a href="{{ url('/logout') }}"
                               onclick="event.preventDefault();
                                        document.getElementById('logout-form').submit();">

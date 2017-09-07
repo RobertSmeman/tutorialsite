@@ -49,10 +49,6 @@
                                       <th> Category </th>
                                       <td> {{ $post->category->name }} </td>
                                     </tr>
-                                    <tr>
-                                      <th> snippet </th>
-                                      <td> {{ $post->snippet }} </td>
-                                    </tr>
                                 </tbody>
                             </table>
                         </div>

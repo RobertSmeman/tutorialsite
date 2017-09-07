@@ -13,7 +13,7 @@
     </div>
 </div>
 <div class="form-group {{ $errors->has('content') ? 'has-error' : ''}}">
-    {!! Form::label('content', 'Inhoud', ['class' => 'col-md-4 control-label']) !!}
+    {!! Form::label('content', 'Beschrijving', ['class' => 'col-md-4 control-label']) !!}
     <div class="col-md-6">
         {!! Form::textarea('content', null, ['class' => 'form-control', 'required' => '']) !!}    <!--maakt een textarea-->
         {!! $errors->first('content', '<p class="help-block">:message</p>') !!}
@@ -27,13 +27,6 @@
                 <option value='{{ $category->id }}'>{{ $category->name }}</option>    <!--afhankelijk van welke id bij category hoord komt de bijbehorende category naam op het scherm-->
             @endforeach   <!--einde foreach-->
         </select>
-    </div>
-</div>
-<div class="form-group {{ $errors->has('title') ? 'has-error' : ''}}">
-    {!! Form::label('snippet', 'Snippet', ['class' => 'col-md-4 control-label']) !!}    <!--maakt een label met de naam Titel-->
-    <div class="col-md-6">
-        {!! Form::text('snippet', null, ['class' => 'form-control', 'required' => '']) !!}    <!--maakt een form stukje waar je tekst kan invullen-->
-        {!! $errors->first('snippet', '<p class="help-block">:message</p>') !!}   <!--geeft een error bericht als de form een error heeft.-->
     </div>
 </div>
 
