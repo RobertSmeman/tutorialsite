@@ -29,7 +29,7 @@
                         'type' => 'submit',
                         'class' => 'offset-md-10 text-right deleteknop',
                         'title' => 'Delete Post',
-                        'onclick'=>'return confirm("Wilt u dit blokje verwijderen?")'
+                        'onclick'=>'return confirm("Wilt u deze categorie verwijderen?")'
                 )) !!}    <!--dit is de verwijder button, als daar op word geklikt dan komt er een berichtje in beeld waar je kan bevestigen of je het blokje wilt verwijderen-->
             {!! Form::close() !!}   <!--form word gesloten-->
             </td>

@@ -4,12 +4,12 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit42a2dda0ecdcb2470143c1c30e6c4966
+class ComposerStaticInitf40fa23cc00ca35428563242b3628220
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
-        '1d1b89d124cc9cb8219922c9d5569199' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
+        '1d1b89d124cc9cb8219922c9d5569199' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
@@ -90,7 +90,6 @@ class ComposerStaticInit42a2dda0ecdcb2470143c1c30e6c4966
         array (
             'Dotenv\\' => 7,
             'Doctrine\\Instantiator\\' => 22,
-            'Doctrine\\Common\\Inflector\\' => 26,
             'DeepCopy\\' => 9,
         ),
         'C' => 
@@ -237,10 +236,6 @@ class ComposerStaticInit42a2dda0ecdcb2470143c1c30e6c4966
         array (
             0 => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator',
         ),
-        'Doctrine\\Common\\Inflector\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Common/Inflector',
-        ),
         'DeepCopy\\' => 
         array (
             0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
@@ -297,6 +292,13 @@ class ComposerStaticInit42a2dda0ecdcb2470143c1c30e6c4966
                 0 => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src',
             ),
         ),
+        'D' => 
+        array (
+            'Doctrine\\Common\\Inflector\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/doctrine/inflector/lib',
+            ),
+        ),
     );
 
     public static $classMap = array (
@@ -312,6 +314,7 @@ class ComposerStaticInit42a2dda0ecdcb2470143c1c30e6c4966
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\PagesController' => __DIR__ . '/../..' . '/app/Http/Controllers/PagesController.php',
+        'App\\Http\\Controllers\\SectionController' => __DIR__ . '/../..' . '/app/Http/Controllers/SectionController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
         'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',
@@ -324,6 +327,7 @@ class ComposerStaticInit42a2dda0ecdcb2470143c1c30e6c4966
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
+        'App\\section' => __DIR__ . '/../..' . '/app/Section.php',
         'Appzcoder\\CrudGenerator\\Commands\\CrudCommand' => __DIR__ . '/..' . '/appzcoder/crud-generator/src/Commands/CrudCommand.php',
         'Appzcoder\\CrudGenerator\\Commands\\CrudControllerCommand' => __DIR__ . '/..' . '/appzcoder/crud-generator/src/Commands/CrudControllerCommand.php',
         'Appzcoder\\CrudGenerator\\Commands\\CrudLangCommand' => __DIR__ . '/..' . '/appzcoder/crud-generator/src/Commands/CrudLangCommand.php',
@@ -344,6 +348,7 @@ class ComposerStaticInit42a2dda0ecdcb2470143c1c30e6c4966
         'CreateCategoriesTable' => __DIR__ . '/../..' . '/database/migrations/2017_05_05_113503_create_categories_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreatePostsTable' => __DIR__ . '/../..' . '/database/migrations/2017_05_29_105152_create_posts_table.php',
+        'CreateSectionTable' => __DIR__ . '/../..' . '/database/migrations/2017_09_08_091255_create_section_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
         'Cron\\AbstractField' => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron/AbstractField.php',
         'Cron\\CronExpression' => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron/CronExpression.php',
@@ -465,7 +470,6 @@ class ComposerStaticInit42a2dda0ecdcb2470143c1c30e6c4966
         'Faker\\Provider\\cs_CZ\\Payment' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/cs_CZ/Payment.php',
         'Faker\\Provider\\cs_CZ\\Person' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/cs_CZ/Person.php',
         'Faker\\Provider\\cs_CZ\\PhoneNumber' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/cs_CZ/PhoneNumber.php',
-        'Faker\\Provider\\cs_CZ\\Text' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/cs_CZ/Text.php',
         'Faker\\Provider\\da_DK\\Address' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/da_DK/Address.php',
         'Faker\\Provider\\da_DK\\Company' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/da_DK/Company.php',
         'Faker\\Provider\\da_DK\\Internet' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/da_DK/Internet.php',
@@ -504,7 +508,6 @@ class ComposerStaticInit42a2dda0ecdcb2470143c1c30e6c4966
         'Faker\\Provider\\el_GR\\Payment' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/el_GR/Payment.php',
         'Faker\\Provider\\el_GR\\Person' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/el_GR/Person.php',
         'Faker\\Provider\\el_GR\\PhoneNumber' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/el_GR/PhoneNumber.php',
-        'Faker\\Provider\\el_GR\\Text' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/el_GR/Text.php',
         'Faker\\Provider\\en_AU\\Address' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/en_AU/Address.php',
         'Faker\\Provider\\en_AU\\Internet' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/en_AU/Internet.php',
         'Faker\\Provider\\en_AU\\PhoneNumber' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/en_AU/PhoneNumber.php',
@@ -558,7 +561,6 @@ class ComposerStaticInit42a2dda0ecdcb2470143c1c30e6c4966
         'Faker\\Provider\\es_ES\\Payment' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/es_ES/Payment.php',
         'Faker\\Provider\\es_ES\\Person' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/es_ES/Person.php',
         'Faker\\Provider\\es_ES\\PhoneNumber' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/es_ES/PhoneNumber.php',
-        'Faker\\Provider\\es_ES\\Text' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/es_ES/Text.php',
         'Faker\\Provider\\es_PE\\Address' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/es_PE/Address.php',
         'Faker\\Provider\\es_PE\\Company' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/es_PE/Company.php',
         'Faker\\Provider\\es_PE\\Person' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/es_PE/Person.php',
@@ -602,7 +604,6 @@ class ComposerStaticInit42a2dda0ecdcb2470143c1c30e6c4966
         'Faker\\Provider\\fr_FR\\Payment' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/fr_FR/Payment.php',
         'Faker\\Provider\\fr_FR\\Person' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/fr_FR/Person.php',
         'Faker\\Provider\\fr_FR\\PhoneNumber' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/fr_FR/PhoneNumber.php',
-        'Faker\\Provider\\fr_FR\\Text' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/fr_FR/Text.php',
         'Faker\\Provider\\he_IL\\Address' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/he_IL/Address.php',
         'Faker\\Provider\\he_IL\\Company' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/he_IL/Company.php',
         'Faker\\Provider\\he_IL\\Payment' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/he_IL/Payment.php',
@@ -618,7 +619,6 @@ class ComposerStaticInit42a2dda0ecdcb2470143c1c30e6c4966
         'Faker\\Provider\\hu_HU\\Payment' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/hu_HU/Payment.php',
         'Faker\\Provider\\hu_HU\\Person' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/hu_HU/Person.php',
         'Faker\\Provider\\hu_HU\\PhoneNumber' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/hu_HU/PhoneNumber.php',
-        'Faker\\Provider\\hu_HU\\Text' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/hu_HU/Text.php',
         'Faker\\Provider\\hy_AM\\Address' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/hy_AM/Address.php',
         'Faker\\Provider\\hy_AM\\Color' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/hy_AM/Color.php',
         'Faker\\Provider\\hy_AM\\Company' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/hy_AM/Company.php',
@@ -664,7 +664,6 @@ class ComposerStaticInit42a2dda0ecdcb2470143c1c30e6c4966
         'Faker\\Provider\\ka_GE\\Payment' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/ka_GE/Payment.php',
         'Faker\\Provider\\ka_GE\\Person' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/ka_GE/Person.php',
         'Faker\\Provider\\ka_GE\\PhoneNumber' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/ka_GE/PhoneNumber.php',
-        'Faker\\Provider\\ka_GE\\Text' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/ka_GE/Text.php',
         'Faker\\Provider\\kk_KZ\\Address' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/kk_KZ/Address.php',
         'Faker\\Provider\\kk_KZ\\Color' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/kk_KZ/Color.php',
         'Faker\\Provider\\kk_KZ\\Company' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/kk_KZ/Company.php',
@@ -678,7 +677,6 @@ class ComposerStaticInit42a2dda0ecdcb2470143c1c30e6c4966
         'Faker\\Provider\\ko_KR\\Internet' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/ko_KR/Internet.php',
         'Faker\\Provider\\ko_KR\\Person' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/ko_KR/Person.php',
         'Faker\\Provider\\ko_KR\\PhoneNumber' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/ko_KR/PhoneNumber.php',
-        'Faker\\Provider\\ko_KR\\Text' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/ko_KR/Text.php',
         'Faker\\Provider\\lt_LT\\Address' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/lt_LT/Address.php',
         'Faker\\Provider\\lt_LT\\Company' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/lt_LT/Company.php',
         'Faker\\Provider\\lt_LT\\Internet' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/lt_LT/Internet.php',
@@ -755,7 +753,6 @@ class ComposerStaticInit42a2dda0ecdcb2470143c1c30e6c4966
         'Faker\\Provider\\ru_RU\\Payment' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/ru_RU/Payment.php',
         'Faker\\Provider\\ru_RU\\Person' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/ru_RU/Person.php',
         'Faker\\Provider\\ru_RU\\PhoneNumber' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/ru_RU/PhoneNumber.php',
-        'Faker\\Provider\\ru_RU\\Text' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/ru_RU/Text.php',
         'Faker\\Provider\\sk_SK\\Address' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/sk_SK/Address.php',
         'Faker\\Provider\\sk_SK\\Company' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/sk_SK/Company.php',
         'Faker\\Provider\\sk_SK\\Internet' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/sk_SK/Internet.php',
@@ -799,7 +796,6 @@ class ComposerStaticInit42a2dda0ecdcb2470143c1c30e6c4966
         'Faker\\Provider\\uk_UA\\Internet' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/uk_UA/Internet.php',
         'Faker\\Provider\\uk_UA\\Person' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/uk_UA/Person.php',
         'Faker\\Provider\\uk_UA\\PhoneNumber' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/uk_UA/PhoneNumber.php',
-        'Faker\\Provider\\uk_UA\\Text' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/uk_UA/Text.php',
         'Faker\\Provider\\uk_Ua\\Payment' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/uk_UA/Payment.php',
         'Faker\\Provider\\vi_VN\\Address' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/vi_VN/Address.php',
         'Faker\\Provider\\vi_VN\\Color' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/vi_VN/Color.php',
@@ -3453,7 +3449,6 @@ class ComposerStaticInit42a2dda0ecdcb2470143c1c30e6c4966
         'phpDocumentor\\Reflection\\DocBlockFactoryInterface' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlockFactoryInterface.php',
         'phpDocumentor\\Reflection\\DocBlock\\Description' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock/Description.php',
         'phpDocumentor\\Reflection\\DocBlock\\DescriptionFactory' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock/DescriptionFactory.php',
-        'phpDocumentor\\Reflection\\DocBlock\\ExampleFinder' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock/ExampleFinder.php',
         'phpDocumentor\\Reflection\\DocBlock\\Serializer' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock/Serializer.php',
         'phpDocumentor\\Reflection\\DocBlock\\StandardTagFactory' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock/StandardTagFactory.php',
         'phpDocumentor\\Reflection\\DocBlock\\Tag' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock/Tag.php',
@@ -3475,9 +3470,6 @@ class ComposerStaticInit42a2dda0ecdcb2470143c1c30e6c4966
         'phpDocumentor\\Reflection\\DocBlock\\Tags\\Property' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Property.php',
         'phpDocumentor\\Reflection\\DocBlock\\Tags\\PropertyRead' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/PropertyRead.php',
         'phpDocumentor\\Reflection\\DocBlock\\Tags\\PropertyWrite' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/PropertyWrite.php',
-        'phpDocumentor\\Reflection\\DocBlock\\Tags\\Reference\\Fqsen' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Reference/Fqsen.php',
-        'phpDocumentor\\Reflection\\DocBlock\\Tags\\Reference\\Reference' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Reference/Reference.php',
-        'phpDocumentor\\Reflection\\DocBlock\\Tags\\Reference\\Url' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Reference/Url.php',
         'phpDocumentor\\Reflection\\DocBlock\\Tags\\Return_' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Return_.php',
         'phpDocumentor\\Reflection\\DocBlock\\Tags\\See' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/See.php',
         'phpDocumentor\\Reflection\\DocBlock\\Tags\\Since' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Since.php',
@@ -3487,6 +3479,7 @@ class ComposerStaticInit42a2dda0ecdcb2470143c1c30e6c4966
         'phpDocumentor\\Reflection\\DocBlock\\Tags\\Var_' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Var_.php',
         'phpDocumentor\\Reflection\\DocBlock\\Tags\\Version' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Version.php',
         'phpDocumentor\\Reflection\\Element' => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src/Element.php',
+        'phpDocumentor\\Reflection\\ExampleFinder' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock/ExampleFinder.php',
         'phpDocumentor\\Reflection\\File' => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src/File.php',
         'phpDocumentor\\Reflection\\Fqsen' => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src/Fqsen.php',
         'phpDocumentor\\Reflection\\FqsenResolver' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/FqsenResolver.php',
@@ -3504,12 +3497,12 @@ class ComposerStaticInit42a2dda0ecdcb2470143c1c30e6c4966
         'phpDocumentor\\Reflection\\Types\\Float_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Float_.php',
         'phpDocumentor\\Reflection\\Types\\Integer' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Integer.php',
         'phpDocumentor\\Reflection\\Types\\Iterable_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Iterable_.php',
-        'phpDocumentor\\Reflection\\Types\\Mixed_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Mixed_.php',
+        'phpDocumentor\\Reflection\\Types\\Mixed' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Mixed.php',
         'phpDocumentor\\Reflection\\Types\\Null_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Null_.php',
         'phpDocumentor\\Reflection\\Types\\Nullable' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Nullable.php',
         'phpDocumentor\\Reflection\\Types\\Object_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Object_.php',
         'phpDocumentor\\Reflection\\Types\\Parent_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Parent_.php',
-        'phpDocumentor\\Reflection\\Types\\Resource_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Resource_.php',
+        'phpDocumentor\\Reflection\\Types\\Resource' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Resource.php',
         'phpDocumentor\\Reflection\\Types\\Scalar' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Scalar.php',
         'phpDocumentor\\Reflection\\Types\\Self_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Self_.php',
         'phpDocumentor\\Reflection\\Types\\Static_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Static_.php',
@@ -3521,10 +3514,10 @@ class ComposerStaticInit42a2dda0ecdcb2470143c1c30e6c4966
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit42a2dda0ecdcb2470143c1c30e6c4966::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit42a2dda0ecdcb2470143c1c30e6c4966::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit42a2dda0ecdcb2470143c1c30e6c4966::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit42a2dda0ecdcb2470143c1c30e6c4966::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitf40fa23cc00ca35428563242b3628220::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitf40fa23cc00ca35428563242b3628220::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitf40fa23cc00ca35428563242b3628220::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitf40fa23cc00ca35428563242b3628220::$classMap;
 
         }, null, ClassLoader::class);
     }

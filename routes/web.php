@@ -19,5 +19,6 @@ Route::resource('tutorial','PagesController');
 Route::resource('cat', 'CategoryController', ['except' => ['create']]);
 Route::resource('admin', 'Admin\\PostsController');
 Route::get('admin', 'PagesController@admin');
+Route::resource('section', 'SectionController', ['except' => ['create']]);
 
 Auth::routes();
